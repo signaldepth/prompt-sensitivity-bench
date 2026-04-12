@@ -17,7 +17,7 @@ The result is written to `.output/experiments/`.
 ## Validate
 
 ```bash
-uv run python scripts/validate_contribution.py .output/experiments/<file>.json
+uv run python ../scripts/validate_contribution.py .output/experiments/<file>.json
 ```
 
 ## Submit

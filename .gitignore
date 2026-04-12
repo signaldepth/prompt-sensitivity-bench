@@ -2,6 +2,7 @@
 site/
 __pycache__/
 .output/
+.playwright-cli/
 *.pyc
 *.egg-info/
 .DS_Store
