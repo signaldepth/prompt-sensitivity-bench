@@ -4,7 +4,11 @@
     "name": "qwen2.5-coder:1.5b",
     "family": "qwen",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "dense",
+    "measurement_hardware": "PC RTX 5070 Ti GPU",
+    "known_run_dates": ["2026-04-10"],
+    "aliases": ["qcoder"],
     "tested_experiments": ["e4", "e7", "e8", "e9"]
   },
   {
@@ -12,7 +16,11 @@
     "name": "gemma3:1b",
     "family": "gemma",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "dense",
+    "measurement_hardware": "PC RTX 5070 Ti GPU",
+    "known_run_dates": ["2026-04-10"],
+    "aliases": ["gemma1b"],
     "tested_experiments": ["e4", "e7", "e8", "e9"]
   },
   {
@@ -20,7 +28,10 @@
     "name": "gemma3:4b",
     "family": "gemma",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "dense",
+    "measurement_hardware": "PC RTX 5070 Ti GPU",
+    "known_run_dates": ["2026-04-10"],
     "tested_experiments": ["e7", "e8", "e9"]
   },
   {
@@ -28,7 +39,11 @@
     "name": "phi4-mini:latest",
     "family": "phi",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "dense",
+    "measurement_hardware": "PC RTX 5070 Ti GPU",
+    "known_run_dates": ["2026-04-10"],
+    "aliases": ["phi4-mini", "phi4-mini:3.8b"],
     "tested_experiments": ["e7", "e8", "e9"]
   },
   {
@@ -36,7 +51,10 @@
     "name": "phi4:14b",
     "family": "phi",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "dense",
+    "measurement_hardware": "PC RTX 5070 Ti GPU",
+    "known_run_dates": ["2026-04-10"],
     "tested_experiments": ["e9"]
   },
   {
@@ -44,7 +62,10 @@
     "name": "llama3.1:8b",
     "family": "llama",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "dense",
+    "measurement_hardware": "PC RTX 5070 Ti GPU",
+    "known_run_dates": ["2026-04-10"],
     "tested_experiments": ["e9"]
   },
   {
@@ -52,39 +73,57 @@
     "name": "gemma4:26b",
     "family": "gemma",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "moe",
-    "tested_experiments": ["e9"]
+    "measurement_hardware": "PC RTX 5070 Ti GPU",
+    "known_run_dates": ["2026-04-10", "2026-04-12"],
+    "tested_experiments": ["e9", "e15"]
   },
   {
     "id": "gemma4:e4b",
     "name": "gemma4:e4b",
     "family": "gemma",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "moe",
-    "tested_experiments": ["e0", "e1"]
+    "measurement_hardware": "Mixed local hosts; see notes",
+    "known_run_dates": ["2026-04-10", "2026-04-12"],
+    "notes": "Earlier e0/e1 runs were local-only. The published E15 context-budget sweep was measured on an Apple Silicon server.",
+    "tested_experiments": ["e0", "e1", "e15"]
   },
   {
     "id": "qwen3.5:4b",
     "name": "qwen3.5:4b",
     "family": "qwen",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "dense",
-    "tested_experiments": ["e9"]
+    "measurement_hardware": "Mixed local hosts; see notes",
+    "known_run_dates": ["2026-04-10", "2026-04-12"],
+    "notes": "The published E9 sweep ran on PC RTX 5070 Ti GPU. The published E15 context-budget sweep ran on an Apple Silicon server.",
+    "tested_experiments": ["e9", "e15"]
   },
   {
     "id": "qwen3.5:9b",
     "name": "qwen3.5:9b",
     "family": "qwen",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "dense",
-    "tested_experiments": ["e0", "e1", "e9"]
+    "measurement_hardware": "Mixed local hosts; see notes",
+    "known_run_dates": ["2026-04-10", "2026-04-12"],
+    "notes": "Earlier runs used PC RTX 5070 Ti GPU. The published E15 context-budget sweep ran on an Apple Silicon server.",
+    "tested_experiments": ["e0", "e1", "e9", "e15"]
   },
   {
     "id": "qwen3.5:27b",
     "name": "qwen3.5:27b",
     "family": "qwen",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "dense",
+    "measurement_hardware": "PC RTX 5070 Ti GPU",
+    "known_run_dates": ["2026-04-10"],
     "tested_experiments": ["e9"]
   },
   {
@@ -92,7 +131,10 @@
     "name": "qwen3.5:35b-a3b",
     "family": "qwen",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "moe",
+    "measurement_hardware": "PC RTX 5070 Ti GPU",
+    "known_run_dates": ["2026-04-10"],
     "tested_experiments": ["e9"]
   },
   {
@@ -100,7 +142,10 @@
     "name": "deepseek-r1:8b",
     "family": "deepseek",
     "provider": "ollama",
+    "runtime": "ollama-local",
     "architecture": "dense",
+    "measurement_hardware": "PC RTX 5070 Ti GPU",
+    "known_run_dates": ["2026-04-10"],
     "tested_experiments": ["e9"]
   },
   {
@@ -108,7 +153,10 @@
     "name": "GPT-4.1-mini",
     "family": "gpt",
     "provider": "openai",
+    "runtime": "provider-api",
     "architecture": "api",
+    "measurement_hardware": "Provider-managed API",
+    "known_run_dates": ["2026-04-10"],
     "tested_experiments": ["e7"]
   },
   {
@@ -116,7 +164,10 @@
     "name": "Claude Haiku 4.5",
     "family": "claude",
     "provider": "anthropic",
+    "runtime": "provider-api",
     "architecture": "api",
+    "measurement_hardware": "Provider-managed API",
+    "known_run_dates": ["2026-04-10"],
     "tested_experiments": ["e7"]
   }
 ]

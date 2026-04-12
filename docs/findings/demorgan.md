@@ -13,3 +13,14 @@ On fizzbuzz, llama3.1:8b passed task_only and full_spec prompts but failed the t
 ## Why It Matters
 
 More specificity is not always monotonically better. Overlapping rule systems need evaluation-order constraints, not only examples.
+
+## Sample Counts
+
+- 1 model
+- 1 task
+- 3 prompt levels shown
+- `k=3` per level
+
+## Uncertainty Notes
+
+This is a single-model, single-task failure mode. It is useful because the behavior was deterministic in the archive, but it should be read as a concrete counterexample rather than a broad population claim.

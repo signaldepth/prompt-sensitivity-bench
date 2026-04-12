@@ -20,6 +20,19 @@ The result is written to `.output/experiments/`.
 uv run python ../scripts/validate_contribution.py .output/experiments/<file>.json
 ```
 
+The public repo validates contribution shape and public artifact shape separately. Maintainers merge selected results into derived public findings; raw run dumps do not get committed automatically.
+
+## Other Public Experiments
+
+The harness now also exposes:
+
+```bash
+uv run python validate.py e7 --model-name <model-name> --host http://localhost:11434 --k 3
+uv run python validate.py e8 --model-name <model-name> --host http://localhost:11434 --k 3
+```
+
+Those experiments are public and runnable, but the lightweight public contribution path is still E9-first until the intake policy and fixtures for the other families are tightened.
+
 ## Submit
 
 Open a GitHub issue with the JSON file pasted into the template, or attach/link a gist if it is large. Maintainers review submissions and fold selected results into derived findings; raw run dumps are not automatically committed to the public repo.

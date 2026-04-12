@@ -26,9 +26,12 @@ jobs:
         with:
           python-version: "3.12"
       - uses: actions/configure-pages@v5
+      - run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
       - run: pip install mkdocs-material
       - run: python scripts/check_public_repo.py
+      - run: python scripts/validate_public_data.py
       - run: python scripts/plot.py
+      - run: python scripts/generate_social_cards.py
       - run: mkdocs build
       - run: cp CNAME site/CNAME
       - uses: actions/upload-pages-artifact@v3

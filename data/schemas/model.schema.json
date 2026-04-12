@@ -2,13 +2,30 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Model",
   "type": "object",
-  "required": ["id", "name", "family", "provider", "tested_experiments"],
+  "required": ["id", "name", "family", "provider", "runtime", "tested_experiments"],
   "properties": {
-    "id": {"type": "string"},
-    "name": {"type": "string"},
-    "family": {"type": "string"},
-    "provider": {"type": "string"},
-    "architecture": {"type": "string"},
-    "tested_experiments": {"type": "array", "items": {"type": "string"}}
+    "id": {"type": "string", "minLength": 1},
+    "name": {"type": "string", "minLength": 1},
+    "family": {"type": "string", "minLength": 1},
+    "provider": {"type": "string", "minLength": 1},
+    "runtime": {"type": "string", "minLength": 1},
+    "architecture": {"type": "string", "minLength": 1},
+    "measurement_hardware": {"type": "string", "minLength": 1},
+    "known_run_dates": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "minItems": 1
+    },
+    "aliases": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "notes": {"type": "string"},
+    "tested_experiments": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "minItems": 1
+    }
   }
 }

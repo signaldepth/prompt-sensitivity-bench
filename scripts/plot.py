@@ -82,7 +82,7 @@ def grouped_chart(path: Path, title: str, data: dict[str, dict[str, float]], lev
     for i, level in enumerate(levels):
         y = 90 + i * 24
         body += f'<rect x="{legend_x}" y="{y - 14}" width="14" height="14" fill="{colors[i % len(colors)]}"/>'
-        body += text(legend_x + 22, y, level, size=12)
+        body += text(legend_x + 22, y, level.replace("_", " "), size=12)
     path.write_text(svg_frame(width, height, body))
 
 
@@ -103,6 +103,14 @@ def main() -> None:
         "Complexity by model",
         comp,
         ["minimal", "role+constr", "examples", "maximal"],
+    )
+
+    context_budget = findings["context-budget"]["data"]["models"]
+    grouped_chart(
+        CHARTS / "context-budget.svg",
+        "Context budget by model",
+        context_budget,
+        ["short_sparse", "long_sparse", "short_dense", "long_dense"],
     )
 
     filler = findings["filler"]["data"]["models"]

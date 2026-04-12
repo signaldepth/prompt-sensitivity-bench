@@ -4,9 +4,9 @@
   "type": "object",
   "required": ["id", "title", "headline", "data"],
   "properties": {
-    "id": {"type": "string"},
-    "title": {"type": "string"},
-    "headline": {"type": "string"},
+    "id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "headline": {"type": "string", "minLength": 1},
     "data": {"type": "object"},
     "sources": {"type": "array", "items": {"type": "string"}}
   }

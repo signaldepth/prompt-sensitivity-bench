@@ -1,6 +1,6 @@
 # Specificity Dwarfs Everything
 
-On 1-4B local models, moving a prompt from vague to task plus input/output spec raised average pass rate from 8% to 82%.
+Across the 12 currently aggregated E9 run archives, moving a prompt from vague to task plus input/output spec raised average pass rate from 9% to 95%.
 
 ![Specificity gradient](../assets/charts/specificity.svg)
 
@@ -8,10 +8,10 @@ On 1-4B local models, moving a prompt from vague to task plus input/output spec 
 
 | Prompt level | Average pass rate | Notes |
 |---|---:|---|
-| vague | 0.08 | Task name only |
-| task_only | 0.38 | The task is stated, but shape is missing |
-| task_io | 0.82 | Input/output shape and one example |
-| full_spec | 0.83 | Adds constraints and edge cases |
+| vague | 0.09 | Task name only |
+| task_only | 0.46 | The task is stated, but shape is missing |
+| task_io | 0.95 | Input/output shape and one example |
+| full_spec | 0.97 | Adds constraints and edge cases |
 
 The jump from task_only to task_io is the cliff. More detail after that helps much less on the current task set.
 
@@ -28,7 +28,20 @@ uv run python validate.py e9 --model-name qwen2.5-coder:1.5b --k 3
 - Aggregated finding: `data/public/findings.json`
 - Task definitions: `harness/data.py`
 
-The full raw run archive for this finding is curated privately.
+The full raw run archive for this finding is curated privately; the public repo ships the derived summary, plotting code, and fixture instead of the per-trial dumps.
+
+## Sample Counts
+
+- 12 archived E9 run files
+- 12 models
+- 4 tasks
+- 48 task-model rows per prompt level
+- 576 total graded calls
+- `k=3` per condition
+
+## Uncertainty Notes
+
+The headline numbers are point estimates averaged across task-model rows from the archived runs. The site does not yet publish confidence intervals, and the archive is still limited to deterministic Python coding tasks rather than open-ended or multi-turn workloads.
 
 ## Limitations
 

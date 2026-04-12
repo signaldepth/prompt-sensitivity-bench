@@ -1,11 +1,12 @@
-site_name: Prompt Sensitivity Bench
-site_description: An open dataset of prompt sensitivity across local and frontier LLMs
+site_name: Signal Depth
+site_description: "Open benchmark measuring how prompt wording changes LLM outputs. Latest E15 result: longer prompts did not help; explicit task contracts did."
 site_url: https://signaldepth.ai/
 repo_url: https://github.com/signaldepth/prompt-sensitivity-bench
 edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
     - scheme: slate
       primary: black
@@ -23,6 +24,7 @@ nav:
   - Home: index.md
   - Findings:
       - Specificity: findings/specificity.md
+      - Context budget: findings/context-budget.md
       - Complexity: findings/complexity.md
       - Filler words: findings/filler.md
       - Format preference: findings/format.md

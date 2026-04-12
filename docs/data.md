@@ -2,6 +2,8 @@
 
 This repo publishes derived findings, schemas, model metadata, and a minimal public fixture.
 
+The current `data/public/*.json` files are derived summaries generated from local/private raw run archives. The public repo includes those summaries, the benchmark machinery, and the validation rules, but it does not publish the full raw per-trial dumps by default.
+
 Public artifacts:
 
 - `data/public/findings.json`
@@ -23,6 +25,14 @@ Then refresh the public charts:
 ```bash
 uv run python scripts/plot.py
 ```
+
+Validate the tracked public artifacts before a push:
+
+```bash
+uv run python scripts/validate_public_data.py
+```
+
+`data/public/models.json` now carries the canonical model id plus runtime, measurement hardware, known run dates, and aliases when the raw archive used older short names.
 
 ## Licenses
 

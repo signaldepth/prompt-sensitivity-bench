@@ -75,6 +75,7 @@ def main() -> None:
     required = [
         ROOT / "data" / "public" / "findings.json",
         ROOT / "data" / "public" / "models.json",
+        ROOT / "data" / "public" / "contributors.json",
         ROOT / "data" / "examples" / "e9_specificity_fixture.json",
     ]
     for path in required:

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% set page_src = page.file.src_uri if page and page.file else "" %}
+  {% set social_title = config.site_name %}
+  {% if page and page.title and page.title != "Home" %}
+    {% set social_title = page.title ~ " | " ~ config.site_name %}
+  {% endif %}
+  {% set social_description = config.site_description %}
+  {% if page_src == "findings/context-budget.md" %}
+    {% set social_description = "Making prompts longer did not help. Explicit task contracts did. short sparse 0.25, long sparse 0.25, short dense 1.00, long dense 1.00." %}
+  {% elif page_src == "findings/specificity.md" %}
+    {% set social_description = "Across 12 archived E9 runs, moving from a vague prompt to a task plus input/output spec raised average pass rate from 0.09 to 0.95." %}
+  {% elif page_src == "findings/complexity.md" %}
+    {% set social_description = "On qwen2.5-coder:1.5b, increasing prompt complexity from minimal to maximal dropped pass rate from 0.78 to 0.28." %}
+  {% elif page_src == "findings/filler.md" %}
+    {% set social_description = "On qwen2.5-coder:1.5b, compressing verbose prompts dropped average pass rate from 0.89 to 0.28." %}
+  {% elif page_src == "findings/format.md" %}
+    {% set social_description = "XML, Markdown, and plain text were indistinguishable in delimiter-only coding tests." %}
+  {% elif page_src == "findings/k1-trap.md" %}
+    {% set social_description = "Boundary-capability models can reverse conclusions between single-shot and repeated measurements. Current rule: use k>=3." %}
+  {% elif page_src == "findings/demorgan.md" %}
+    {% set social_description = "On fizzbuzz, llama3.1:8b passed task_only and full_spec prompts but failed the task_io phrasing." %}
+  {% endif %}
+  {% set social_url = config.site_url %}
+  {% if page and page.canonical_url %}
+    {% set social_url = page.canonical_url %}
+  {% endif %}
+  {% set social_image = config.site_url ~ "assets/social/home-card.png" %}
+  {% if page_src == "findings/context-budget.md" %}
+    {% set social_image = config.site_url ~ "assets/social/context-budget-card.png" %}
+  {% elif page_src == "findings/specificity.md" %}
+    {% set social_image = config.site_url ~ "assets/social/specificity-card.png" %}
+  {% elif page_src == "findings/complexity.md" %}
+    {% set social_image = config.site_url ~ "assets/social/complexity-card.png" %}
+  {% elif page_src == "findings/filler.md" %}
+    {% set social_image = config.site_url ~ "assets/social/filler-card.png" %}
+  {% elif page_src == "findings/format.md" %}
+    {% set social_image = config.site_url ~ "assets/social/format-card.png" %}
+  {% elif page_src == "findings/k1-trap.md" %}
+    {% set social_image = config.site_url ~ "assets/social/k1-trap-card.png" %}
+  {% elif page_src == "findings/demorgan.md" %}
+    {% set social_image = config.site_url ~ "assets/social/demorgan-card.png" %}
+  {% endif %}
+  {% set social_alt = "Signal Depth social card showing the E15 result: short sparse 0.25, long sparse 0.25, short dense 1.00, long dense 1.00." %}
+  {% if page_src == "findings/specificity.md" %}
+    {% set social_alt = "Signal Depth social card for specificity: vague 0.09, task_only 0.46, task_io 0.95, full_spec 0.97." %}
+  {% elif page_src == "findings/complexity.md" %}
+    {% set social_alt = "Signal Depth social card for complexity: qwen2.5-coder:1.5b drops from 0.78 to 0.28 at maximal complexity." %}
+  {% elif page_src == "findings/filler.md" %}
+    {% set social_alt = "Signal Depth social card for filler sensitivity: qwen2.5-coder:1.5b original 0.89, compressed 0.28." %}
+  {% elif page_src == "findings/format.md" %}
+    {% set social_alt = "Signal Depth social card for format: XML 0.80, Markdown 0.80, plain 0.83." %}
+  {% elif page_src == "findings/k1-trap.md" %}
+    {% set social_alt = "Signal Depth social card for k=1 trap: boundary-capability models can reverse conclusions, use k>=3." %}
+  {% elif page_src == "findings/demorgan.md" %}
+    {% set social_alt = "Signal Depth social card for DeMorgan inversion on llama3.1:8b: task_only 1.00, task_io 0.33, full_spec 1.00." %}
+  {% endif %}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ social_title }}" />
+  <meta property="og:description" content="{{ social_description }}" />
+  <meta property="og:url" content="{{ social_url }}" />
+  <meta property="og:image" content="{{ social_image }}" />
+  <meta property="og:image:secure_url" content="{{ social_image }}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="{{ social_alt }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ social_title }}" />
+  <meta name="twitter:description" content="{{ social_description }}" />
+  <meta name="twitter:image" content="{{ social_image }}" />
+  <meta name="twitter:image:alt" content="{{ social_alt }}" />
+{% endblock %}

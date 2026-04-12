@@ -84,7 +84,109 @@
           "full_spec": 1.0
         }
       },
-      "source_count": 12
+      "source_count": 12,
+      "sample_counts": {
+        "source_archives": 12,
+        "model_count": 12,
+        "task_count": 4,
+        "rows_per_level": 48,
+        "total_rows": 192,
+        "calls_per_level": 144,
+        "total_calls": 576,
+        "k": 3
+      }
+    }
+  },
+  {
+    "id": "context-budget",
+    "title": "Density beats length",
+    "headline": "Longer prompts did not help when the task contract stayed sparse.",
+    "data": {
+      "conditions": {
+        "short_sparse": 0.25,
+        "long_sparse": 0.25,
+        "short_dense": 1.0,
+        "long_dense": 1.0
+      },
+      "marginals": {
+        "length": {
+          "short": 0.625,
+          "long": 0.625
+        },
+        "density": {
+          "sparse": 0.25,
+          "dense": 1.0
+        }
+      },
+      "models": {
+        "gemma4:26b": {
+          "short_sparse": 0.0,
+          "long_sparse": 0.0,
+          "short_dense": 1.0,
+          "long_dense": 1.0
+        },
+        "gemma4:e4b": {
+          "short_sparse": 0.0,
+          "long_sparse": 0.0,
+          "short_dense": 1.0,
+          "long_dense": 1.0
+        },
+        "qwen3.5:4b": {
+          "short_sparse": 0.5,
+          "long_sparse": 0.5,
+          "short_dense": 1.0,
+          "long_dense": 1.0
+        },
+        "qwen3.5:9b": {
+          "short_sparse": 0.5,
+          "long_sparse": 0.5,
+          "short_dense": 1.0,
+          "long_dense": 1.0
+        }
+      },
+      "tasks": {
+        "fizzbuzz": {
+          "short_sparse": 0.0,
+          "long_sparse": 0.0,
+          "short_dense": 1.0,
+          "long_dense": 1.0
+        },
+        "flatten": {
+          "short_sparse": 0.5,
+          "long_sparse": 0.5,
+          "short_dense": 1.0,
+          "long_dense": 1.0
+        },
+        "run_length_encode": {
+          "short_sparse": 0.5,
+          "long_sparse": 0.5,
+          "short_dense": 1.0,
+          "long_dense": 1.0
+        },
+        "two_sum": {
+          "short_sparse": 0.0,
+          "long_sparse": 0.0,
+          "short_dense": 1.0,
+          "long_dense": 1.0
+        }
+      },
+      "failure_modes": {
+        "extraction_failure": 12,
+        "runtime_error": 21,
+        "wrong_output_type": 39
+      },
+      "source_count": 4,
+      "sample_counts": {
+        "source_archives": 4,
+        "model_count": 4,
+        "task_count": 4,
+        "condition_count": 4,
+        "rows_per_condition": 16,
+        "total_rows": 64,
+        "calls_per_condition": 48,
+        "total_calls": 192,
+        "k": 3
+      }
     }
   },
   {
@@ -107,7 +209,7 @@
           "examples": 0.83,
           "maximal": 0.83
         },
-        "phi4-mini": {
+        "phi4-mini:latest": {
           "minimal": 0.89,
           "role+constr": 0.94,
           "examples": 0.72,
@@ -120,7 +222,13 @@
           "maximal": 0.94
         }
       },
-      "source_count": 1
+      "source_count": 1,
+      "sample_counts": {
+        "source_archives": 1,
+        "model_count": 4,
+        "prompt_count": 4,
+        "total_calls": 96
+      }
     }
   },
   {
@@ -129,16 +237,23 @@
     "headline": "Compression hurts some small models on deterministic coding tasks.",
     "data": {
       "models": {
-        "gemma1b": {
+        "gemma3:1b": {
           "original": 0.9444,
           "compressed": 0.9444
         },
-        "qcoder": {
+        "qwen2.5-coder:1.5b": {
           "original": 0.8889,
           "compressed": 0.2778
         }
       },
-      "source_count": 1
+      "source_count": 1,
+      "sample_counts": {
+        "source_archives": 1,
+        "model_count": 2,
+        "task_count": 6,
+        "variant_count": 2,
+        "rows": 24
+      }
     }
   },
   {
@@ -152,7 +267,7 @@
         "plain": 0.83
       },
       "models": {
-        "phi4-mini": {
+        "phi4-mini:latest": {
           "xml": 0.69,
           "markdown": 0.69,
           "plain": 0.77
@@ -173,7 +288,13 @@
           "plain": 0.83
         }
       },
-      "source_count": 1
+      "source_count": 1,
+      "sample_counts": {
+        "source_archives": 1,
+        "model_count": 4,
+        "format_count": 3,
+        "total_calls": 96
+      }
     }
   }
 ]
