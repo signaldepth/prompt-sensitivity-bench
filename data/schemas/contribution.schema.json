@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contribution",
+  "type": "object",
+  "required": ["experiment", "model_name", "temperature", "k", "results"],
+  "properties": {
+    "experiment": {"const": "e9_specificity"},
+    "model_name": {"type": "string"},
+    "model_provider": {"type": "string"},
+    "model_hardware": {"type": "string"},
+    "temperature": {"type": "number"},
+    "k": {"type": "integer", "minimum": 3},
+    "results": {"type": "array"}
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experiment",
+  "type": "object",
+  "required": ["experiment", "results"],
+  "properties": {
+    "experiment": {"type": "string"},
+    "results": {}
+  }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "qwen2.5-coder:1.5b",
+    "name": "qwen2.5-coder:1.5b",
+    "family": "qwen",
+    "provider": "ollama",
+    "architecture": "dense",
+    "tested_experiments": ["e4", "e7", "e8", "e9"]
+  },
+  {
+    "id": "gemma3:1b",
+    "name": "gemma3:1b",
+    "family": "gemma",
+    "provider": "ollama",
+    "architecture": "dense",
+    "tested_experiments": ["e4", "e7", "e8", "e9"]
+  },
+  {
+    "id": "gemma3:4b",
+    "name": "gemma3:4b",
+    "family": "gemma",
+    "provider": "ollama",
+    "architecture": "dense",
+    "tested_experiments": ["e7", "e8", "e9"]
+  },
+  {
+    "id": "phi4-mini:latest",
+    "name": "phi4-mini:latest",
+    "family": "phi",
+    "provider": "ollama",
+    "architecture": "dense",
+    "tested_experiments": ["e7", "e8", "e9"]
+  },
+  {
+    "id": "phi4:14b",
+    "name": "phi4:14b",
+    "family": "phi",
+    "provider": "ollama",
+    "architecture": "dense",
+    "tested_experiments": ["e9"]
+  },
+  {
+    "id": "llama3.1:8b",
+    "name": "llama3.1:8b",
+    "family": "llama",
+    "provider": "ollama",
+    "architecture": "dense",
+    "tested_experiments": ["e9"]
+  },
+  {
+    "id": "gemma4:26b",
+    "name": "gemma4:26b",
+    "family": "gemma",
+    "provider": "ollama",
+    "architecture": "moe",
+    "tested_experiments": ["e9"]
+  },
+  {
+    "id": "gemma4:e4b",
+    "name": "gemma4:e4b",
+    "family": "gemma",
+    "provider": "ollama",
+    "architecture": "moe",
+    "tested_experiments": ["e0", "e1"]
+  },
+  {
+    "id": "qwen3.5:4b",
+    "name": "qwen3.5:4b",
+    "family": "qwen",
+    "provider": "ollama",
+    "architecture": "dense",
+    "tested_experiments": ["e9"]
+  },
+  {
+    "id": "qwen3.5:9b",
+    "name": "qwen3.5:9b",
+    "family": "qwen",
+    "provider": "ollama",
+    "architecture": "dense",
+    "tested_experiments": ["e0", "e1", "e9"]
+  },
+  {
+    "id": "qwen3.5:27b",
+    "name": "qwen3.5:27b",
+    "family": "qwen",
+    "provider": "ollama",
+    "architecture": "dense",
+    "tested_experiments": ["e9"]
+  },
+  {
+    "id": "qwen3.5:35b-a3b",
+    "name": "qwen3.5:35b-a3b",
+    "family": "qwen",
+    "provider": "ollama",
+    "architecture": "moe",
+    "tested_experiments": ["e9"]
+  },
+  {
+    "id": "deepseek-r1:8b",
+    "name": "deepseek-r1:8b",
+    "family": "deepseek",
+    "provider": "ollama",
+    "architecture": "dense",
+    "tested_experiments": ["e9"]
+  },
+  {
+    "id": "gpt-4.1-mini",
+    "name": "GPT-4.1-mini",
+    "family": "gpt",
+    "provider": "openai",
+    "architecture": "api",
+    "tested_experiments": ["e7"]
+  },
+  {
+    "id": "claude-haiku-4.5",
+    "name": "Claude Haiku 4.5",
+    "family": "claude",
+    "provider": "anthropic",
+    "architecture": "api",
+    "tested_experiments": ["e7"]
+  }
+]

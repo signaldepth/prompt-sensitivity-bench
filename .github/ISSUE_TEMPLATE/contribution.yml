@@ -1,0 +1,37 @@
+name: Submit a benchmark run
+description: I ran the harness on a model. Here are the results.
+title: "[Contribution] <model-name>"
+labels: ["contribution", "review-needed"]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model name
+      description: Canonical identifier, e.g. deepseek-v3 or qwen3.5:9b
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Hardware
+      description: CPU or GPU model, VRAM, inference backend
+    validations:
+      required: true
+  - type: textarea
+    id: json
+    attributes:
+      label: Paste your JSON result file
+      description: Full contents, not a link
+      render: json
+    validations:
+      required: true
+  - type: input
+    id: github
+    attributes:
+      label: GitHub handle for credit
+      placeholder: "@yourusername"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything unusual about the run

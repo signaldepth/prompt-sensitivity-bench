@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Finding",
+  "type": "object",
+  "required": ["id", "title", "headline", "data"],
+  "properties": {
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "headline": {"type": "string"},
+    "data": {"type": "object"},
+    "sources": {"type": "array", "items": {"type": "string"}}
+  }
+}

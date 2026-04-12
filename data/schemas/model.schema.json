@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Model",
+  "type": "object",
+  "required": ["id", "name", "family", "provider", "tested_experiments"],
+  "properties": {
+    "id": {"type": "string"},
+    "name": {"type": "string"},
+    "family": {"type": "string"},
+    "provider": {"type": "string"},
+    "architecture": {"type": "string"},
+    "tested_experiments": {"type": "array", "items": {"type": "string"}}
+  }
+}

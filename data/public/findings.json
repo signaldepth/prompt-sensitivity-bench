@@ -1,0 +1,179 @@
+[
+  {
+    "id": "specificity",
+    "title": "Specificity dwarfs everything",
+    "headline": "Vague to task plus input/output spec is the largest measured effect.",
+    "data": {
+      "levels": {
+        "vague": 0.0903,
+        "task_only": 0.4583,
+        "task_io": 0.9514,
+        "full_spec": 0.9722
+      },
+      "models": {
+        "deepseek-r1:8b": {
+          "vague": 0.0,
+          "task_only": 0.5,
+          "task_io": 1.0,
+          "full_spec": 1.0
+        },
+        "gemma3:1b": {
+          "vague": 0.0,
+          "task_only": 0.25,
+          "task_io": 0.9167,
+          "full_spec": 1.0
+        },
+        "gemma3:4b": {
+          "vague": 0.25,
+          "task_only": 0.5,
+          "task_io": 1.0,
+          "full_spec": 1.0
+        },
+        "gemma4:26b": {
+          "vague": 0.0,
+          "task_only": 0.5,
+          "task_io": 1.0,
+          "full_spec": 1.0
+        },
+        "llama3.1:8b": {
+          "vague": 0.0,
+          "task_only": 0.5,
+          "task_io": 0.8333,
+          "full_spec": 1.0
+        },
+        "phi4-mini:latest": {
+          "vague": 0.0,
+          "task_only": 0.3333,
+          "task_io": 0.9444,
+          "full_spec": 1.0
+        },
+        "phi4:14b": {
+          "vague": 0.0,
+          "task_only": 0.5,
+          "task_io": 1.0,
+          "full_spec": 1.0
+        },
+        "qwen2.5-coder:1.5b": {
+          "vague": 0.0833,
+          "task_only": 0.4167,
+          "task_io": 0.7222,
+          "full_spec": 0.6667
+        },
+        "qwen3.5:27b": {
+          "vague": 0.25,
+          "task_only": 0.5,
+          "task_io": 1.0,
+          "full_spec": 1.0
+        },
+        "qwen3.5:35b-a3b": {
+          "vague": 0.25,
+          "task_only": 0.5,
+          "task_io": 1.0,
+          "full_spec": 1.0
+        },
+        "qwen3.5:4b": {
+          "vague": 0.0,
+          "task_only": 0.5,
+          "task_io": 1.0,
+          "full_spec": 1.0
+        },
+        "qwen3.5:9b": {
+          "vague": 0.25,
+          "task_only": 0.5,
+          "task_io": 1.0,
+          "full_spec": 1.0
+        }
+      },
+      "source_count": 12
+    }
+  },
+  {
+    "id": "complexity",
+    "title": "Complexity hurts small models",
+    "headline": "The smallest coder model drops sharply at maximal prompt complexity.",
+    "data": {
+      "calls": 96,
+      "hardware": "PC RTX 5070 Ti GPU",
+      "models": {
+        "qwen2.5-coder:1.5b": {
+          "minimal": 0.78,
+          "role+constr": 0.94,
+          "examples": 0.83,
+          "maximal": 0.28
+        },
+        "gemma3:1b": {
+          "minimal": 0.94,
+          "role+constr": 0.94,
+          "examples": 0.83,
+          "maximal": 0.83
+        },
+        "phi4-mini": {
+          "minimal": 0.89,
+          "role+constr": 0.94,
+          "examples": 0.72,
+          "maximal": 0.94
+        },
+        "gemma3:4b": {
+          "minimal": 0.94,
+          "role+constr": 0.94,
+          "examples": 0.94,
+          "maximal": 0.94
+        }
+      },
+      "source_count": 1
+    }
+  },
+  {
+    "id": "filler",
+    "title": "Filler words are load-bearing",
+    "headline": "Compression hurts some small models on deterministic coding tasks.",
+    "data": {
+      "models": {
+        "gemma1b": {
+          "original": 0.9444,
+          "compressed": 0.9444
+        },
+        "qcoder": {
+          "original": 0.8889,
+          "compressed": 0.2778
+        }
+      },
+      "source_count": 1
+    }
+  },
+  {
+    "id": "format",
+    "title": "Format preference is noise",
+    "headline": "XML, Markdown, and plain text were indistinguishable in delimiter-only tests.",
+    "data": {
+      "overall": {
+        "xml": 0.8,
+        "markdown": 0.8,
+        "plain": 0.83
+      },
+      "models": {
+        "phi4-mini": {
+          "xml": 0.69,
+          "markdown": 0.69,
+          "plain": 0.77
+        },
+        "gemma3:4b": {
+          "xml": 0.96,
+          "markdown": 0.96,
+          "plain": 0.96
+        },
+        "qwen2.5-coder:1.5b": {
+          "xml": 0.75,
+          "markdown": 0.75,
+          "plain": 0.75
+        },
+        "gemma3:1b": {
+          "xml": 0.79,
+          "markdown": 0.81,
+          "plain": 0.83
+        }
+      },
+      "source_count": 1
+    }
+  }
+]

@@ -1,0 +1,47 @@
+site_name: Prompt Sensitivity Bench
+site_description: An open dataset of prompt sensitivity across local and frontier LLMs
+site_url: https://signaldepth.ai/
+repo_url: https://github.com/signaldepth/prompt-sensitivity-bench
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: black
+      accent: amber
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.action.edit
+
+nav:
+  - Home: index.md
+  - Findings:
+      - Specificity: findings/specificity.md
+      - Complexity: findings/complexity.md
+      - Filler words: findings/filler.md
+      - Format preference: findings/format.md
+      - k=1 trap: findings/k1-trap.md
+      - DeMorgan inversion: findings/demorgan.md
+  - Methodology: methodology.md
+  - Data: data.md
+  - Contribute: contribute.md
+  - About: about.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - tables
+  - footnotes
+  - attr_list
+  - toc:
+      permalink: true
+
+plugins:
+  - search
