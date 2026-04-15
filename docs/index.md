@@ -1,6 +1,6 @@
 # Signal Depth
 
-## Making prompts longer did not help. Making the task contract explicit did.
+## Making prompts longer did not help. Making the task contract explicit did. { .sd-hero-title }
 
 On the current E15 context-budget sweep:
 
@@ -10,10 +10,12 @@ On the current E15 context-budget sweep:
 - `long_dense = 1.00`
 
 Deterministic Python code tasks, 4 local-model runs, `k=3`, temperature `0.0`.
+{ .sd-hero-scope }
 
-[:octicons-graph-16: See The E15 Result](findings/context-budget.md){ .md-button .md-button--primary }
+[:octicons-graph-16: E15 Result](findings/context-budget.md){ .md-button .md-button--primary }
 [:octicons-beaker-16: Methodology](methodology.md){ .md-button }
 [:octicons-mark-github-16: Repo](https://github.com/signaldepth/prompt-sensitivity-bench){ .md-button }
+{ .sd-hero-actions }
 
 ![Context budget by model](assets/charts/context-budget.svg)
 

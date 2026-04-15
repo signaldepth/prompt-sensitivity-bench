@@ -4,6 +4,9 @@ site_url: https://signaldepth.ai/
 repo_url: https://github.com/signaldepth/prompt-sensitivity-bench
 edit_uri: edit/main/docs/
 
+extra_css:
+  - stylesheets/extra.css
+
 theme:
   name: material
   custom_dir: docs/overrides

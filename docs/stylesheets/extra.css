@@ -1,0 +1,58 @@
+.md-typeset .sd-hero-title {
+  max-width: 880px;
+  margin: 1.4rem auto 0.8rem;
+  text-align: center;
+  font-size: 2.55rem;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.md-typeset .sd-hero-scope {
+  max-width: 780px;
+  margin: 1rem auto;
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.92rem;
+}
+
+.md-typeset .sd-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin: 1.15rem auto 1.4rem;
+}
+
+.md-typeset .sd-hero-actions .md-button {
+  min-width: 9.5rem;
+  border-color: rgba(255, 204, 102, 0.5);
+  text-align: center;
+}
+
+.md-typeset .sd-hero-actions .md-button:hover,
+.md-typeset .sd-hero-actions .md-button:focus {
+  border-color: #ffcc66;
+}
+
+.md-typeset .sd-hero-actions .md-button--primary:hover,
+.md-typeset .sd-hero-actions .md-button--primary:focus {
+  background-color: #ffcc66;
+  border-color: #ffcc66;
+  color: #111;
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .sd-hero-title {
+    font-size: 1.9rem;
+  }
+
+  .md-typeset .sd-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .md-typeset .sd-hero-actions .md-button {
+    width: 100%;
+  }
+}
