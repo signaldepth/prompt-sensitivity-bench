@@ -71,8 +71,8 @@ def axis_label(x: int, y: int) -> str:
     )
 
 
-def watermark(x: int, y: int, *, anchor: str = "end") -> str:
-    return text(x, y, "Signal Depth", size=24, anchor=anchor, fill=FG, opacity=0.18, weight=700)
+def watermark(x: int, y: int, *, anchor: str = "middle") -> str:
+    return text(x, y, "SignalDepth.ai", size=28, anchor=anchor, fill=FG, opacity=0.32, weight=700)
 
 
 def subtitle_line(value: str) -> str:
@@ -110,7 +110,7 @@ def bar_chart(
         body += f'<rect x="{left}" y="{y}" width="{w}" height="{bar_h}" rx="3" fill="{color}"/>'
         body += text(left + w + 12, y + 29, f"{value:.2f}", size=13)
     body += axis_label(left + plot_w // 2, height - 20)
-    body += watermark(left + plot_w - 18, top + plot_h - 18)
+    body += watermark(left + int(plot_w * 0.68), top + int(plot_h * 0.78))
     path.write_text(svg_frame(width, height, body))
 
 
@@ -162,7 +162,7 @@ def grouped_chart(
         )
         body += text(legend_x + 22, y, level.replace("_", " "), size=12)
     body += axis_label(left + scale_w // 2, height - 20)
-    body += watermark(left + scale_w - 18, top + plot_h - 18)
+    body += watermark(left + int(scale_w * 0.68), top + int(plot_h * 0.78))
     path.write_text(svg_frame(width, height, body))
 
 
